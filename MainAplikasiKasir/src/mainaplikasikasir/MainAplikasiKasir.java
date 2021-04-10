@@ -24,4 +24,5 @@ public class MainAplikasiKasir {
         System.out.println("Nama anda adalah: " + namaUser);
     }
     
+public void generateDaftarMenu() { }
 }
