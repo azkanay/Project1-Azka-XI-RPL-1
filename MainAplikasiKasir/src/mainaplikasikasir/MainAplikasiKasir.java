@@ -34,6 +34,28 @@ public static void main(String[] args) {
  int jumlah_pesanan, no_menu;
  //End of Tambahan
 }
+    private Object input;
+    private Object makan_ditempat;
+
+//mulai transaksi 
+System.out.println("========== TRANSAKSI ==========");
+
+//ambil data transaksi
+System.out.print("No Transaksi : ");
+no_transaksi = input.next();
+System.out.print("Pemesan : ");
+nama_pemesan = input.next();
+System.out.print("Tanggal : [dd-mm-yyyy] ");
+tanggal = input.next();
+System.out.print("Makan ditempat? [Y/N] ");
+makan_ditempat = input.next();
+
+if (makan_ditempat.equalsIgnoreCase("Y")){
+    System.out.print("Nomor Meja : ");
+    no_meja = input.next();
+
+
+
 public void generateDaftarMenu() { 
     daftarMenu = new DaftarMenu();
     daftarMenu.tambahMenu(new Ramen("Ramen Seafood", 25000));
@@ -56,4 +78,34 @@ public void generateDaftarMenu() {
     
     daftarMenu.tampilDaftarMenu();
   }
+
+    private static class no_transaksi {
+
+        public no_transaksi() {
+        }
+    }
+
+    private static class nama_pemesan {
+
+        public nama_pemesan() {
+        }
+    }
+
+    private static class tanggal {
+
+        public tanggal() {
+        }
+    }
+
+    private static class makan_ditempat {
+
+        public makan_ditempat() {
+        }
+
+        private static class equalsIgnoreCase {
+
+            public equalsIgnoreCase() {
+            }
+        }
+    }
 }
