@@ -17,22 +17,23 @@ import java.util.Scanner;
  */
 public class MainAplikasiKasir {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        //inisialisasi kelas Scanner untuk mengambil
-        //input dari keyboard
-        Scanner input = new Scanner(System.in);
-        
-        MainAplikasiKasir app = new MainAplikasiKasir();
-        //tampilkan daftar menu
-        app.generateDaftarMenu();
 
-    }
     
 public DaftarMenu daftarMenu;
+//Tambahan
+public static double PAJAK_PPN = 0.10;
+public static double BIAYA_SERVICE = 0.05;
+//End of Tambahan
     
+public static void main(String[] args) {
+ //init
+ Scanner input = new Scanner(System.in);
+ //Tambahkan
+ String no_transaksi, nama_pemesan, tanggal, no_meja = "";
+ String transaksi_lagi = "", pesen_lagi = "", keterangan = "", makan_ditempat;
+ int jumlah_pesanan, no_menu;
+ //End of Tambahan
+}
 public void generateDaftarMenu() { 
     daftarMenu = new DaftarMenu();
     daftarMenu.tambahMenu(new Ramen("Ramen Seafood", 25000));
