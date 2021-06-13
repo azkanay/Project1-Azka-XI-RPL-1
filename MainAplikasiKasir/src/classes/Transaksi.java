@@ -28,3 +28,28 @@ public class Transaksi {
     public double hitungKembalian() {return 0; }
     public void cetakStruk(){ }
 }
+
+//tambah
+/*private double biayaService=();*/
+
+public Transaksi (String no_transaksi, String nm_pemesan, String tanggal, String no_meja){
+    this.noTransaksi = no_transaksi;
+    this.namaPemesan = nm_pemesan;
+    this.tanggal = tanggal;
+    this.noMeja = no_meja;
+
+    pesanan = new Arraylist<>();
+}
+
+public void tambahPesanan(Pesanan pesanan){
+    this.pesanan.add(pesanan);
+}
+
+    //hilangkan dari struktur kelas
+// public Pesanan getPesanan(){
+//    return pesanan;
+// }
+
+public Arraylist<Pesanan> getSemuaPesanan(){
+    return pesanan;
+}

@@ -54,7 +54,67 @@ if (makan_ditempat.equalsIgnoreCase("Y")){
     System.out.print("Nomor Meja : ");
     no_meja = input.next();
 
-
+//buat transaksi baru
+    Transaksi trans = new Transaksi (no_transaksi, nama_pemesan, tanggal, no_meja);
+    System.out.println("======== PESANAN ========");
+    int no_kuah;
+    do {
+        //ambil menu berdasarkan nomor urut yang dipilih
+        Menu menu_yang_dipilih = app.daftarMenu.pilihMenu();
+        
+        jumlah_pesanan = (int) app.cekInputNumber("Jumlah : ");
+        
+        //buat pesanan
+        Pesanan pesanan = new Pesanan(menu_yang_dipilih, jumlah_pesanan);
+        trans.tambahPesanan(pesanan);
+        
+        //khusus untuk menu ramen, pesanan kuahnya langsung diinput juga
+        if (menu_yang_dipilih.getKategori().equals("Ramen")){
+            //looping sesuai jumlah pesanan ramen
+            int jumlah_ramen = jumlah pesanan ramen
+            do{
+                //ambil objek menu berdasarkan nomor yang dipilih
+                Menu kuah_yang_dipilih = app.daftarMenu.pilihKuah();
+                
+                System.out.print("Level : [0-5 : ]");
+                String level = input.next();
+                
+                //validasi jumlah kuah tidak boleh lebih besar dari jumlah_ramen
+                int jumlah_kuah = 0;
+                do{
+                    jumlah_kuah = (int) app.cekInputNumber("Jumlah : ");
+                    
+                    if(jumlah_kuah > jumlah_ramen);
+                    
+                //set pesanan kuah
+                Pesanan pesanan_kuah = (kuah_ yang_dipilih, jumlah_kuah);
+                pesan_kuah.setKeterangan("Level " + level);
+                
+                //tambahkan pesanan kuah ke transaksi
+                trans.tambahPesanan(pesan_kuah);
+                
+                
+            //hitung jumlah ramen yang belum dipesan kuah nya
+            jumlah_ramen == jumlah_kuah;
+        } while (jumlah_pesanan > 0);
+                
+    } else{
+        //jika keterangan tidak ditulis -
+        System.out.print("Keterangan [- jika kosong]: ");
+        keterangan = input.next();
+    }
+    
+    //cek jika keterangan diisi selain "-" set ke pesanan
+    if (!keterangan.equals("-")) {
+        pesanan.setKeterangan(keterangan);
+    }
+            }
+        
+        //konfirmasi, mau tambah pesanan atau tidak
+        System.out.print("Tambah Pesanan Lagi? [Y/N] : ");
+        pesan_lagi = input.next();
+    } while (pesan_lagi.equalsIgnoreCase("Y"));
+   }
 
 public void generateDaftarMenu() { 
     daftarMenu = new DaftarMenu();
@@ -78,6 +138,32 @@ public void generateDaftarMenu() {
     
     daftarMenu.tampilDaftarMenu();
   }
+
+    public double cekInputNumber(String label){
+        try{
+            Scanner get_input = new Scanner(System.in);
+            System.out.println(label);
+            double nilai = get_input.nextDouble();
+            
+            return nilai;
+        }catch(InputMismatchExpection ex){
+            System.out.print("[Err] Harap masukkan angka");
+            return cekInputNumber(label);
+        }
+    }
+
+    private static class app {
+
+        public app() {
+        }
+    }
+
+    private static class InputMismatchExpection {
+
+        public InputMismatchExpection() {
+        }
+    }
+    }
 
     private static class no_transaksi {
 
