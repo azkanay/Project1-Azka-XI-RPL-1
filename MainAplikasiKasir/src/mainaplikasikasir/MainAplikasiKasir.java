@@ -39,6 +39,7 @@ public static void main(String[] args) {
 
 //mulai transaksi 
 System.out.println("========== TRANSAKSI ==========");
+do{
 
 //ambil data transaksi
 System.out.print("No Transaksi : ");
@@ -154,7 +155,13 @@ if (makan_ditempat.equalsIgnoreCase("Y")){
             break;
         }
 } while (kembalian < 0 );
+    
+    System.out.println("Lakukan Transaksi Lagi? {Y?N}");
+    transaksi_lagi = input.next();
+}while (transaksi_lagi.equalsIgnoreCase("Y"));
 
+    System.out.println("======= TERIMA KASIH =======")
+    
 System.out.println("======== TERIMA KASIH ========");
     
 
